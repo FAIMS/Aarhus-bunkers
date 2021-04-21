@@ -76,7 +76,7 @@ If you have any questions about the module, please contact the FAIMS team at **e
 
 ---
 
-## Photos from the field:
+## Photos from the field
 
 <p align="left">
   <img src="https://github.com/FAIMS/link to where the image lives.jpg" />
