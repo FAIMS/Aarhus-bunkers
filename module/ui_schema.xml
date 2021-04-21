@@ -18,23 +18,115 @@
             </large>
           </style>
           <!--END: Style-->
-          <User>
-            <User>
-              <Select_User/>
-            </User>
-          </User>
-          <Control>
-            <Main>
-              <New_Record/>
-            </Main>
-          </Control>
-          <Record>
-            <Record>
-              <Hello_World/>
-            </Record>
-          </Record>
+          <Welcome>
+            <Welcome>
+              <Logo/>
+              <Start/>
+            </Welcome>
+          </Welcome>
+          <Login>
+            <Login>
+              <Please_select_a_user/>
+              <Log_in/>
+              <Signup_Guide_1/>
+              <Sign_up/>
+            </Login>
+            <Manual>
+              <Manual/>
+              <Go_to_Login_Tab/>
+            </Manual>
+          </Login>
+          <Start>
+            <Start>
+              <Record_New_Bunker/>
+              <Next_Bunker_ID/>
+              <My_Last_3_Records/>
+            </Start>
+            <Search>
+              <Colgroup_0>
+                <Col_0>
+                  <Search_Term/>
+                </Col_0>
+                <Col_1>
+                  <Search_Button/>
+                </Col_1>
+              </Colgroup_0>
+              <Entity_List/>
+            </Search>
+            <Map>
+              <Map/>
+              <Colgroup_1>
+                <Col_1>
+                  <Center_Me_1/>
+                </Col_1>
+                <Col_2>
+                  <Save_Map_Settings_1/>
+                </Col_2>
+              </Colgroup_1>
+            </Map>
+          </Start>
+          <Bunker>
+            <Bunker_Admin>
+              <Validate/>
+              <Bunker_author/>
+              <Bunker_timestamp/>
+              <Bunker_ID/>
+              <Bunker_Name/>
+              <Colgroup_1>
+                <Col_1>
+                  <Latitude/>
+                </Col_1>
+                <Col_2>
+                  <Longitude/>
+                </Col_2>
+              </Colgroup_1>
+              <Colgroup_2>
+                <Col_1>
+                  <Northing/>
+                </Col_1>
+                <Col_2>
+                  <Easting/>
+                </Col_2>
+                <Col_3>
+                  <Accuracy/>
+                </Col_3>
+              </Colgroup_2>
+              <Take_From_GPS_1/>
+              <Description_of_bunker_or_location/>
+              <Colgroup_3>
+                <Col_1>
+                  <Height_Max/>
+                  <Diameter_Max/>
+                </Col_1>
+                <Col_2>
+                  <Height_Min/>
+                  <Diameter_Min/>
+                </Col_2>
+              </Colgroup_3>
+              <Image/>
+              <Image_Button_1/>
+            </Bunker_Admin>
+            <Condition>
+              <Landuse_around_Bunker/>
+              <Landuse_on_top_of_Bunker/>
+              <Notes_on_shape_and_dimension/>
+              <Condition/>
+              <Source_of_Impact/>
+              <Robbers_trenches/>
+              <Notes_on_Condition/>
+              <Detail_photo/>
+              <Detail_photo_Button_1/>
+              <Associated_material/>
+              <Associated_features/>
+            </Condition>
+          </Bunker>
         </faims>
       </instance>
+      <bind nodeset="/faims/Start/Start/Next_Bunker_ID" type="decimal"/>
+      <bind nodeset="/faims/Bunker/Bunker_Admin/Colgroup_3/Col_1/Height_Max" type="decimal"/>
+      <bind nodeset="/faims/Bunker/Bunker_Admin/Colgroup_3/Col_1/Diameter_Max" type="decimal"/>
+      <bind nodeset="/faims/Bunker/Bunker_Admin/Colgroup_3/Col_2/Height_Min" type="decimal"/>
+      <bind nodeset="/faims/Bunker/Bunker_Admin/Colgroup_3/Col_2/Diameter_Min" type="decimal"/>
     </model>
   </h:head>
   <h:body>
@@ -61,34 +153,269 @@
       </group>
     </group>
     <!--END: Style-->
-    <group ref="User">
-      <label>{User}</label>
-      <group ref="User" faims_scrollable="false">
-        <label>{User}</label>
-        <select1 appearance="compact" ref="Select_User">
-          <label>{Select_User}</label>
+    <group ref="Welcome">
+      <label>{Welcome}</label>
+      <group ref="Welcome">
+        <label>{Welcome}</label>
+        <input faims_web="true" ref="Logo">
+          <label/>
+        </input>
+        <trigger ref="Start">
+          <label>{Start}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Login">
+      <label>{Login}</label>
+      <group ref="Login">
+        <label>{Login}</label>
+        <select1 ref="Please_select_a_user" faims_annotation="false" faims_certainty="false">
+          <label>{Please_select_a_user}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <trigger ref="Log_in">
+          <label>{Log_in}</label>
+        </trigger>
+        <input faims_web="true" ref="Signup_Guide_1">
+          <label/>
+        </input>
+        <trigger ref="Sign_up">
+          <label>{Sign_up}</label>
+        </trigger>
+      </group>
+      <group ref="Manual">
+        <label>{Manual}</label>
+        <input faims_web="true" ref="Manual">
+          <label/>
+        </input>
+        <trigger ref="Go_to_Login_Tab">
+          <label>{Go_to_Login_Tab}</label>
+        </trigger>
+      </group>
+    </group>
+    <group ref="Start">
+      <label>{Start}</label>
+      <group ref="Start" faims_scrollable="false">
+        <label>{Start}</label>
+        <trigger ref="Record_New_Bunker" faims_annotation="false" faims_certainty="false">
+          <label>{Record_New_Bunker}</label>
+        </trigger>
+        <input ref="Next_Bunker_ID" faims_style_class="required">
+          <label>{Next_Bunker_ID}</label>
+        </input>
+        <select1 appearance="compact" ref="My_Last_3_Records">
+          <label>{My_Last_3_Records}</label>
           <item>
             <label>Options not loaded</label>
             <value>Options not loaded</value>
           </item>
         </select1>
       </group>
-    </group>
-    <group ref="Control">
-      <label>{Control}</label>
-      <group ref="Main">
-        <label>{Main}</label>
-        <trigger ref="New_Record">
-          <label>{New_Record}</label>
-        </trigger>
+      <group ref="Search" faims_scrollable="false">
+        <label>{Search}</label>
+        <group ref="Colgroup_0" faims_style="orientation">
+          <label/>
+          <group ref="Col_0" faims_style="even">
+            <label/>
+            <input ref="Search_Term">
+              <label>{Search_Term}</label>
+            </input>
+          </group>
+          <group ref="Col_1" faims_style="large">
+            <label/>
+            <trigger ref="Search_Button">
+              <label>{Search_Button}</label>
+            </trigger>
+          </group>
+        </group>
+        <select1 appearance="compact" ref="Entity_List">
+          <label>{Entity_List}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="Map" faims_scrollable="false">
+        <label>{Map}</label>
+        <input faims_map="true" ref="Map">
+          <label>{Map}</label>
+        </input>
+        <group ref="Colgroup_1" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <trigger ref="Center_Me_1">
+              <label>{Center_Me_1}</label>
+            </trigger>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <trigger ref="Save_Map_Settings_1">
+              <label>{Save_Map_Settings_1}</label>
+            </trigger>
+          </group>
+        </group>
       </group>
     </group>
-    <group ref="Record" faims_archent_type="Record">
-      <label>{Record}</label>
-      <group ref="Record">
-        <label>{Record}</label>
-        <input faims_attribute_name="Hello World" faims_attribute_type="measure" ref="Hello_World">
-          <label>{Hello_World}</label>
+    <group ref="Bunker" faims_archent_type="Bunker">
+      <label>{Bunker}</label>
+      <group ref="Bunker_Admin">
+        <label>{Bunker_Admin}</label>
+        <trigger ref="Validate">
+          <label>{Validate}</label>
+        </trigger>
+        <input faims_attribute_name="Bunker author" faims_attribute_type="measure" ref="Bunker_author" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+          <label>{Bunker_author}</label>
+        </input>
+        <input faims_attribute_name="Bunker timestamp" faims_attribute_type="measure" ref="Bunker_timestamp" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+          <label>{Bunker_timestamp}</label>
+        </input>
+        <input faims_attribute_name="Bunker ID" faims_attribute_type="measure" ref="Bunker_ID" faims_read_only="true" faims_annotation="false" faims_certainty="false">
+          <label>{Bunker_ID}</label>
+        </input>
+        <input faims_attribute_name="Bunker Name" faims_attribute_type="measure" ref="Bunker_Name">
+          <label>{Bunker_Name}</label>
+        </input>
+        <group ref="Colgroup_1" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Latitude" faims_attribute_type="measure" ref="Latitude" faims_style_class="required" faims_read_only="true">
+              <label>{Latitude}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Longitude" faims_attribute_type="measure" ref="Longitude" faims_style_class="required" faims_read_only="true">
+              <label>{Longitude}</label>
+            </input>
+          </group>
+        </group>
+        <group ref="Colgroup_2" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Northing" faims_attribute_type="measure" ref="Northing" faims_style_class="required" faims_read_only="true">
+              <label>{Northing}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Easting" faims_attribute_type="measure" ref="Easting" faims_style_class="required" faims_read_only="true">
+              <label>{Easting}</label>
+            </input>
+          </group>
+          <group ref="Col_3" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Accuracy" faims_attribute_type="measure" ref="Accuracy" faims_style_class="required" faims_read_only="true">
+              <label>{Accuracy}</label>
+            </input>
+          </group>
+        </group>
+        <trigger ref="Take_From_GPS_1">
+          <label>{Take_From_GPS_1}</label>
+        </trigger>
+        <input faims_attribute_name="Description of bunker or location" faims_attribute_type="measure" ref="Description_of_bunker_or_location">
+          <label>{Description_of_bunker_or_location}</label>
+        </input>
+        <group ref="Colgroup_3" faims_style="orientation">
+          <label/>
+          <group ref="Col_1" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Height Max" faims_attribute_type="measure" ref="Height_Max" faims_style_class="required">
+              <label>{Height_Max}</label>
+            </input>
+            <input faims_attribute_name="Diameter Max" faims_attribute_type="measure" ref="Diameter_Max" faims_style_class="required">
+              <label>{Diameter_Max}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="Height Min" faims_attribute_type="measure" ref="Height_Min">
+              <label>{Height_Min}</label>
+            </input>
+            <input faims_attribute_name="Diameter Min" faims_attribute_type="measure" ref="Diameter_Min">
+              <label>{Diameter_Min}</label>
+            </input>
+          </group>
+        </group>
+        <select faims_sync="true" type="camera" faims_attribute_name="Image" faims_attribute_type="measure" ref="Image">
+          <label>{Image}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <trigger ref="Image_Button_1">
+          <label>{Image_Button_1}</label>
+        </trigger>
+      </group>
+      <group ref="Condition">
+        <label>{Condition}</label>
+        <select1 type="image" faims_attribute_name="Landuse around Bunker" faims_attribute_type="vocab" ref="Landuse_around_Bunker" faims_style_class="required" faims_html_description="true">
+          <label>{Landuse_around_Bunker}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select1 type="image" faims_attribute_name="Landuse on top of Bunker" faims_attribute_type="vocab" ref="Landuse_on_top_of_Bunker" faims_style_class="required" faims_html_description="true">
+          <label>{Landuse_on_top_of_Bunker}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <input faims_attribute_name="Notes on shape and dimension" faims_attribute_type="measure" ref="Notes_on_shape_and_dimension">
+          <label>{Notes_on_shape_and_dimension}</label>
+        </input>
+        <select1 faims_attribute_name="Condition" faims_attribute_type="vocab" ref="Condition" faims_style_class="required">
+          <label>{Condition}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select1 faims_attribute_name="Source of Impact" faims_attribute_type="vocab" ref="Source_of_Impact">
+          <label>{Source_of_Impact}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+        <select faims_attribute_name="Robbers trenches" faims_attribute_type="vocab" ref="Robbers_trenches">
+          <label>{Robbers_trenches}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <input faims_attribute_name="Notes on Condition" faims_attribute_type="measure" ref="Notes_on_Condition">
+          <label>{Notes_on_Condition}</label>
+        </input>
+        <select faims_sync="true" type="camera" faims_attribute_name="Detail photo" faims_attribute_type="measure" ref="Detail_photo">
+          <label>{Detail_photo}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <trigger ref="Detail_photo_Button_1">
+          <label>{Detail_photo_Button_1}</label>
+        </trigger>
+        <select faims_attribute_name="Associated material" faims_attribute_type="vocab" ref="Associated_material">
+          <label>{Associated_material}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select>
+        <input faims_attribute_name="Associated features" faims_attribute_type="measure" ref="Associated_features">
+          <label>{Associated_features}</label>
         </input>
       </group>
     </group>

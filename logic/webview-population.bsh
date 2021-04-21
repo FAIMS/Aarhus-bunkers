@@ -1,0 +1,6 @@
+/***************************** WEBVIEW POPULATION *****************************/
+guideFile = getAttachedFilePath("files/data/guide/MoundsCommunityManual.html");
+populateWebView ("Login/Manual/Manual", guideFile);
+
+welcomeFile = getAttachedFilePath("files/data/welcome_page/welcome.html");
+populateWebView ("Welcome/Welcome/Logo", welcomeFile);

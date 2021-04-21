@@ -1,5 +1,5 @@
 /*
- * GENERATED WITH FAIMS-TOOLS, SHA1: 4338da25c1e0ab384a34f1da434cd9e8c3613d1a
+ * GENERATED WITH FAIMS-TOOLS, SHA1: 0464ffa4896c3c209cd6552656235739c87ceee7
  */
 import android.util.Log;
 import android.os.Build.MODEL;
@@ -12,7 +12,7 @@ final String SEP = Character.toString ((char) 0);
 
 final String MSG_LOADING = "Loading...";
 
-final String USER_MENU_PATH = "User/User/Select_User";
+final String USER_MENU_PATH = "Login/Login/Please_select_a_user";
 userMenuPath = USER_MENU_PATH; // Depricated. Use `USER_MENU_PATH` instead
 
 final long SESS_START_TIME = System.currentTimeMillis();
@@ -314,17 +314,90 @@ List    NOAUTOSAVE_TAB_GROUPS             = new ArrayList();
 HashSet NOAUTOSAVE_TAB_GROUPS_AS_HASH_SET = null;
 HashMap REF_TO_FLAG_STRING                = new HashMap();
 
-NODATA_TAB_GROUPS.add("User");
-NODATA_TAB_GROUPS.add("Control");
+NODATA_TAB_GROUPS.add("Welcome");
+NODATA_TAB_GROUPS.add("Login");
+NODATA_TAB_GROUPS.add("Start");
 
-REF_TO_TYPE.put("User/User/Select_User", "list");
-REF_TO_TYPE.put("Control/Main/New_Record", "button");
-REF_TO_TYPE.put("Record/Record/Hello_World", "input");
-REF_TO_TYPE.put("User/User", "tab");
-REF_TO_TYPE.put("Control/Main", "tab");
-REF_TO_TYPE.put("Record/Record", "tab");
+REF_TO_TYPE.put("Welcome/Welcome/Logo", "webview");
+REF_TO_TYPE.put("Welcome/Welcome/Start", "button");
+REF_TO_TYPE.put("Login/Login/Please_select_a_user", "dropdown");
+REF_TO_TYPE.put("Login/Login/Log_in", "button");
+REF_TO_TYPE.put("Login/Login/Signup_Guide_1", "webview");
+REF_TO_TYPE.put("Login/Login/Sign_up", "button");
+REF_TO_TYPE.put("Login/Manual/Manual", "webview");
+REF_TO_TYPE.put("Login/Manual/Go_to_Login_Tab", "button");
+REF_TO_TYPE.put("Start/Start/Record_New_Bunker", "button");
+REF_TO_TYPE.put("Start/Start/Next_Bunker_ID", "input");
+REF_TO_TYPE.put("Start/Start/My_Last_3_Records", "list");
+REF_TO_TYPE.put("Start/Search/Search_Term", "input");
+REF_TO_TYPE.put("Start/Search/Search_Button", "button");
+REF_TO_TYPE.put("Start/Search/Entity_List", "list");
+REF_TO_TYPE.put("Start/Map/Map", "map");
+REF_TO_TYPE.put("Start/Map/Center_Me_1", "button");
+REF_TO_TYPE.put("Start/Map/Save_Map_Settings_1", "button");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Validate", "button");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Bunker_author", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Bunker_timestamp", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Bunker_ID", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Bunker_Name", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Latitude", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Longitude", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Northing", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Easting", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Accuracy", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Take_From_GPS_1", "button");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Description_of_mound_or_location", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Height_Max", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Diameter_Max", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Height_Min", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Diameter_Min", "input");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Image", "camera");
+REF_TO_TYPE.put("Bunker/Bunker_Admin/Image_Button_1", "button");
+REF_TO_TYPE.put("Bunker/Condition/Landuse_around_Bunker", "picture");
+REF_TO_TYPE.put("Bunker/Condition/Landuse_on_top_of_Bunker", "picture");
+REF_TO_TYPE.put("Bunker/Condition/Notes_on_shape_and_dimension", "input");
+REF_TO_TYPE.put("Bunker/Condition/Condition", "dropdown");
+REF_TO_TYPE.put("Bunker/Condition/Source_of_Impact", "dropdown");
+REF_TO_TYPE.put("Bunker/Condition/Robbers_trenches", "checkbox");
+REF_TO_TYPE.put("Bunker/Condition/Notes_on_Condition", "input");
+REF_TO_TYPE.put("Bunker/Condition/Detail_photo", "camera");
+REF_TO_TYPE.put("Bunker/Condition/Detail_photo_Button_1", "button");
+REF_TO_TYPE.put("Bunker/Condition/Associated_material", "checkbox");
+REF_TO_TYPE.put("Bunker/Condition/Associated_features", "input");
+REF_TO_TYPE.put("Welcome/Welcome", "tab");
+REF_TO_TYPE.put("Login/Login", "tab");
+REF_TO_TYPE.put("Login/Manual", "tab");
+REF_TO_TYPE.put("Start/Start", "tab");
+REF_TO_TYPE.put("Start/Search", "tab");
+REF_TO_TYPE.put("Start/Map", "tab");
+REF_TO_TYPE.put("Bunker/Bunker_Admin", "tab");
+REF_TO_TYPE.put("Bunker/Condition", "tab");
 
-DATA_REFS.add("Record/Record/Hello_World");
+DATA_REFS.add("Bunker/Bunker_Admin/Bunker_author");
+DATA_REFS.add("Bunker/Bunker_Admin/Bunker_timestamp");
+DATA_REFS.add("Bunker/Bunker_Admin/Bunker_ID");
+DATA_REFS.add("Bunker/Bunker_Admin/Bunker_Name");
+DATA_REFS.add("Bunker/Bunker_Admin/Latitude");
+DATA_REFS.add("Bunker/Bunker_Admin/Longitude");
+DATA_REFS.add("Bunker/Bunker_Admin/Northing");
+DATA_REFS.add("Bunker/Bunker_Admin/Easting");
+DATA_REFS.add("Bunker/Bunker_Admin/Accuracy");
+DATA_REFS.add("Bunker/Bunker_Admin/Description_of_mound_or_location");
+DATA_REFS.add("Bunker/Bunker_Admin/Height_Max");
+DATA_REFS.add("Bunker/Bunker_Admin/Diameter_Max");
+DATA_REFS.add("Bunker/Bunker_Admin/Height_Min");
+DATA_REFS.add("Bunker/Bunker_Admin/Diameter_Min");
+DATA_REFS.add("Bunker/Bunker_Admin/Image");
+DATA_REFS.add("Bunker/Condition/Landuse_around_Bunker");
+DATA_REFS.add("Bunker/Condition/Landuse_on_top_of_Bunker");
+DATA_REFS.add("Bunker/Condition/Notes_on_shape_and_dimension");
+DATA_REFS.add("Bunker/Condition/Condition");
+DATA_REFS.add("Bunker/Condition/Source_of_Impact");
+DATA_REFS.add("Bunker/Condition/Robbers_trenches");
+DATA_REFS.add("Bunker/Condition/Notes_on_Condition");
+DATA_REFS.add("Bunker/Condition/Detail_photo");
+DATA_REFS.add("Bunker/Condition/Associated_material");
+DATA_REFS.add("Bunker/Condition/Associated_features");
 
 
 
@@ -334,25 +407,80 @@ DATA_REFS.add("Record/Record/Hello_World");
 
 
 
-TAB_GROUPS_AS_LIST.add("User");
-TAB_GROUPS_AS_LIST.add("Control");
-TAB_GROUPS_AS_LIST.add("Record");
+TAB_GROUPS_AS_LIST.add("Welcome");
+TAB_GROUPS_AS_LIST.add("Login");
+TAB_GROUPS_AS_LIST.add("Start");
+TAB_GROUPS_AS_LIST.add("Bunker");
 
-TABS_AS_LIST.add("User/User");
-TABS_AS_LIST.add("Control/Main");
-TABS_AS_LIST.add("Record/Record");
+TABS_AS_LIST.add("Welcome/Welcome");
+TABS_AS_LIST.add("Login/Login");
+TABS_AS_LIST.add("Login/Manual");
+TABS_AS_LIST.add("Start/Start");
+TABS_AS_LIST.add("Start/Search");
+TABS_AS_LIST.add("Start/Map");
+TABS_AS_LIST.add("Bunker/Bunker_Admin");
+TABS_AS_LIST.add("Bunker/Condition");
 
 
 
-REF_TO_FLAG_STRING.put("User/User/Select_User", "user");
-REF_TO_FLAG_STRING.put("Control/Main/New_Record", "");
-REF_TO_FLAG_STRING.put("Record/Record/Hello_World", "id");
-REF_TO_FLAG_STRING.put("User/User", "noscroll");
-REF_TO_FLAG_STRING.put("Control/Main", "");
-REF_TO_FLAG_STRING.put("Record/Record", "");
-REF_TO_FLAG_STRING.put("User", "nodata");
-REF_TO_FLAG_STRING.put("Control", "nodata");
-REF_TO_FLAG_STRING.put("Record", "");
+REF_TO_FLAG_STRING.put("Welcome/Welcome/Logo", "nolabel");
+REF_TO_FLAG_STRING.put("Welcome/Welcome/Start", "");
+REF_TO_FLAG_STRING.put("Login/Login/Please_select_a_user", "noannotation nocertainty user");
+REF_TO_FLAG_STRING.put("Login/Login/Log_in", "");
+REF_TO_FLAG_STRING.put("Login/Login/Signup_Guide_1", "nolabel");
+REF_TO_FLAG_STRING.put("Login/Login/Sign_up", "");
+REF_TO_FLAG_STRING.put("Login/Manual/Manual", "nolabel");
+REF_TO_FLAG_STRING.put("Login/Manual/Go_to_Login_Tab", "");
+REF_TO_FLAG_STRING.put("Start/Start/Record_New_Bunker", "noannotation nocertainty");
+REF_TO_FLAG_STRING.put("Start/Start/Next_Bunker_ID", "notnull");
+REF_TO_FLAG_STRING.put("Start/Start/My_Last_3_Records", "");
+REF_TO_FLAG_STRING.put("Start/Search/Search_Term", "");
+REF_TO_FLAG_STRING.put("Start/Search/Search_Button", "");
+REF_TO_FLAG_STRING.put("Start/Search/Entity_List", "");
+REF_TO_FLAG_STRING.put("Start/Map/Map", "");
+REF_TO_FLAG_STRING.put("Start/Map/Center_Me_1", "");
+REF_TO_FLAG_STRING.put("Start/Map/Save_Map_Settings_1", "");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Validate", "");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Bunker_author", "readonly id noannotation nocertainty");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Bunker_timestamp", "readonly noannotation nocertainty");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Bunker_ID", "autonum id noannotation nocertainty readonly");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Bunker_Name", "id");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Latitude", "readonly notnull");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Longitude", "readonly notnull");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Northing", "readonly notnull");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Easting", "readonly notnull");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Accuracy", "readonly notnull");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Take_From_GPS_1", "");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Description_of_mound_or_location", "");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Height_Max", "notnull");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Diameter_Max", "notnull");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Height_Min", "");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Diameter_Min", "");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Image", "");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin/Image_Button_1", "");
+REF_TO_FLAG_STRING.put("Bunker/Condition/Landuse_around_Bunker", "htmldesc notnull");
+REF_TO_FLAG_STRING.put("Bunker/Condition/Landuse_on_top_of_Bunker", "htmldesc notnull");
+REF_TO_FLAG_STRING.put("Bunker/Condition/Notes_on_shape_and_dimension", "");
+REF_TO_FLAG_STRING.put("Bunker/Condition/Condition", "notnull");
+REF_TO_FLAG_STRING.put("Bunker/Condition/Source_of_Impact", "");
+REF_TO_FLAG_STRING.put("Bunker/Condition/Robbers_trenches", "");
+REF_TO_FLAG_STRING.put("Bunker/Condition/Notes_on_Condition", "");
+REF_TO_FLAG_STRING.put("Bunker/Condition/Detail_photo", "");
+REF_TO_FLAG_STRING.put("Bunker/Condition/Detail_photo_Button_1", "");
+REF_TO_FLAG_STRING.put("Bunker/Condition/Associated_material", "");
+REF_TO_FLAG_STRING.put("Bunker/Condition/Associated_features", "");
+REF_TO_FLAG_STRING.put("Welcome/Welcome", "");
+REF_TO_FLAG_STRING.put("Login/Login", "");
+REF_TO_FLAG_STRING.put("Login/Manual", "");
+REF_TO_FLAG_STRING.put("Start/Start", "noscroll");
+REF_TO_FLAG_STRING.put("Start/Search", "nodata noscroll");
+REF_TO_FLAG_STRING.put("Start/Map", "noscroll");
+REF_TO_FLAG_STRING.put("Bunker/Bunker_Admin", "");
+REF_TO_FLAG_STRING.put("Bunker/Condition", "");
+REF_TO_FLAG_STRING.put("Welcome", "nodata");
+REF_TO_FLAG_STRING.put("Login", "nodata");
+REF_TO_FLAG_STRING.put("Start", "nodata");
+REF_TO_FLAG_STRING.put("Bunker", "");
 
 String getType(String ref) {
   String type = REF_TO_TYPE.get(ref);
@@ -464,7 +592,7 @@ HashSet getTabsAsHashSet() {
 
 List getStartingIdRefs() {
   List l = new ArrayList();
-  
+  l.add("Start/Start/Next_Bunker_ID");
   return l;
 }
 
@@ -1554,10 +1682,10 @@ void timedPopulateCursorList(String ref, String q, int limit) {
 
 void setUpTypeHierarchy() {
   //- 
-  //  - Record
+  //  - Bunker
 
   n0 = Tree("", 1);
-  n1 = Tree("Record", 1);
+  n1 = Tree("Bunker", 1);
 
   n0.addChild(n1);
 
@@ -2846,7 +2974,11 @@ void updateGPSDiagnostics() {
 }
 
 final String MAP_CFG_PATH = "files/data/saved_config.json";
-
+final String MAP_REF = "Start/Map/Map";
+void centerMe() { centerOnCurrentPosition(MAP_REF); }
+addOnEvent("Start/Map/Center_Me_1", "click", "centerMe()");
+addOnEvent("Start/Map/Save_Map_Settings_1", "click", "saveMapSettings()");
+addOnEvent("module", "load", "loadMapSettings()");
 
 void loadMapSettings() {
   String filePath = getAttachedFilePath(MAP_CFG_PATH);
@@ -2989,7 +3121,7 @@ void populateListForUsers(){
 }
 
 String getUserMenuValue(int i) {
-  String selectedUser = getListItemValue();
+  String selectedUser = getFieldValue(USER_MENU_PATH);
   if (selectedUser == null)
     return "";
 
@@ -3037,7 +3169,7 @@ if (!isNull(USER_MENU_PATH)) {
   addOnEventCond(USER_MENU_PATH, "click", "USER_MENU_IS_LOADED");
 }
 
-
+addOnEvent("Login/Login/Sign_up", "click", "onClickSignup__()");
 
 /******************************************************************************/
 /*                                 VALIDATION                                 */
@@ -3123,6 +3255,12 @@ void validateTabGroup(String tabGroup) {
   showWarning("{validation_results}", validationMessage);
 }
 
+void validateStart() {
+  validateTabGroup("Start");
+}
+void validateBunker() {
+  validateTabGroup("Bunker");
+}
 
 
 /******************************************************************************/
@@ -3272,8 +3410,8 @@ String getTimestampNow(String fmt) {
 void populateAuthorAndTimestamp(String tabgroup) {
   Map tabgroupToAuthor    = new HashMap();
   Map tabgroupToTimestamp = new HashMap();
-  
-  
+  tabgroupToAuthor.put("Bunker", "Bunker/Bunker_Admin/Bunker_author");
+  tabgroupToTimestamp.put("Bunker", "Bunker/Bunker_Admin/Bunker_timestamp");
   String authorPath    = tabgroupToAuthor.get(tabgroup);
   String timestampPath = tabgroupToTimestamp.get(tabgroup);
 
@@ -3289,29 +3427,40 @@ for (String tabGroup : getTabGroups()) {
   addOnEvent(tabGroup, "show", funStr);
 }
 
-void onClickUserSelectUser () {
-  newTab("Control", true);
+void onClickWelcomeStart () {
+  newTab("Login/Manual", true);
 }
 
-void onClickControlNewRecord () {
-  parentTabgroup__ = "Control";
-  newRecord();
+void onClickLoginGotoLoginTab () {
+  newTab("Login/Login", true);
+}
+
+void onClickStartRecordNewBunker () {
+  parentTabgroup__ = "Start";
+  newBunker();
+}
+
+void onValidClickLoginLogin () {
+  newTab("Start", true);
 }
 
 
 
+void onClickLoginLogin () {
+  showVerifyUserDialog("onValidClickLoginLogin()");
+}
 
 
-
-
-
-addOnEvent("User/User/Select_User", "click", "onClickUserSelectUser()");
-addOnEvent("Control/Main/New_Record", "click", "onClickControlNewRecord()");
+addOnEvent("Welcome/Welcome/Start", "click", "onClickWelcomeStart()");
+addOnEvent("Login/Manual/Go_to_Login_Tab", "click", "onClickLoginGotoLoginTab()");
+addOnEvent("Start/Start/Record_New_Bunker", "click", "onClickStartRecordNewBunker()");
+addOnEvent("Login/Login/Log_in", "click", "onClickLoginLogin()");
 
 /******************************************************************************/
 /*                   AUDIO, CAMERA, FILE AND VIDEO BINDINGS                   */
 /******************************************************************************/
-
+addOnEvent("Bunker/Bunker_Admin/Image_Button_1", "click", "attachPictureTo(\"Bunker/Bunker_Admin/Image\")");
+addOnEvent("Bunker/Condition/Detail_photo_Button_1", "click", "attachPictureTo(\"Bunker/Condition/Detail_photo\")");
 
 /******************************************************************************/
 /*                 BINDINGS FOR 'VIEW ATTACHED FILES' BUTTONS                 */
@@ -3331,7 +3480,8 @@ void removeNavigationButtons() {
 void addNavigationButtons(String tabgroup) {
   removeNavigationButtons();
   List tabgroupsToValidate = new ArrayList();
-  
+  tabgroupsToValidate.add("Start");
+  tabgroupsToValidate.add("Bunker");
   addNavigationButton("new", new ActionButtonCallback() {
     actionOnLabel() {
       "{New}";
@@ -3677,37 +3827,41 @@ void loadEntityFrom(String entityID, String onFail) {
 }
 
 
-void newRecord(String parent){
-  String tabgroup = "Record";
+void newBunker(String parent){
+  String tabgroup = "Bunker";
   if (!isNull(parent)) {
     triggerAutoSave();
     parentTabgroup   = parent;
     parentTabgroup__ = parent;
   }
-  
+  if (isNull("Start/Start/Next_Bunker_ID")) {
+    showWarning("{Alert}", "{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
 
   setUuid(tabgroup, null);
   newTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
   populateEntityListsInTabGroup(tabgroup);
-  
+  incAutoNum("Bunker/Bunker_Admin/Bunker_ID");
 
   executeOnEvent(tabgroup, "create");
 }
 
-void newRecord (){
-  newRecord(null);
+void newBunker (){
+  newBunker(null);
 }
-void duplicateRecord(){
-  String tabgroup = "Record";
+void duplicateBunker(){
+  String tabgroup = "Bunker";
   String uuidOld = getUuid(tabgroup);
   setUuid(tabgroup, "");
   disableAutoSave(tabgroup);
-  
+  incAutoNum("Bunker/Bunker_Admin/Bunker_ID");
   clearGpsInTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
   populateEntityListsInTabGroup(tabgroup);
-  
+  populateCameraPictureGallery("Bunker/Bunker_Admin/Image", new ArrayList());
+  populateCameraPictureGallery("Bunker/Condition/Detail_photo", new ArrayList());
   executeOnEvent(tabgroup, "copy");
 
   saveCallback = new SaveCallback() {
@@ -3739,38 +3893,43 @@ void duplicateRecord(){
     onFetch(result) {
       excludeAttributes = new ArrayList();
 
-      
+      excludeAttributes.add("Image");
+      excludeAttributes.add("Detail photo");
 
       duplicateTabGroup(tabgroup, null, getExtraAttributes(result), excludeAttributes, saveCallback);
     }
   });
 }
-addOnEvent("Record", "save", "populateEntityListsOfArchEnt(\"Record\")");
+addOnEvent("Bunker", "save", "populateEntityListsOfArchEnt(\"Bunker\")");
 
 void doNotDelete(){
   showToast("{Delete_Cancelled}");
 }
 
-addOnEvent("User", "show", "removeNavigationButtons()");
-addOnEvent("Control", "show", "removeNavigationButtons()");
-addOnEvent("Record", "show", "removeNavigationButtons()");
-addOnEvent("Record", "show", "addNavigationButtons(\"Record\")");
+addOnEvent("Welcome", "show", "removeNavigationButtons()");
+addOnEvent("Login", "show", "removeNavigationButtons()");
+addOnEvent("Start", "show", "removeNavigationButtons()");
+addOnEvent("Bunker", "show", "removeNavigationButtons()");
+addOnEvent("Bunker", "show", "addNavigationButtons(\"Bunker\")");
 
 /******************************************************************************/
 /*                                   SEARCH                                   */
 /******************************************************************************/
-
+addOnEvent("Start/Search"               , "show"  , "search()");
+addOnEvent("Start/Search/Entity_List"   , "click" , "loadEntity();");
+addOnEvent("Start/Search/Search_Button" , "click" , "search()");
+addOnEvent("Start/Search/Search_Term"   , "click" , "clearSearch()");
 
 
 
 void clearSearch(){
-  setFieldValue("/Search/Search_Term","");
+  setFieldValue("Start/Search/Search_Term","");
 }
 
 void search(){
-  String refEntityList  = "/Search/Entity_List";
-  String refSearchTerm  = "/Search/Search_Term";
-  String refEntityTypes = "/Search/Entity_Types";
+  String refEntityList  = "Start/Search/Entity_List";
+  String refSearchTerm  = "Start/Search/Search_Term";
+  String refEntityTypes = "Start/Search/Entity_Types";
 
   String type = "";
   String term = getFieldValue(refSearchTerm);
@@ -3790,13 +3949,13 @@ void search(){
 
   populateMenu(refEntityList, MSG_LOADING);
   populateCursorList(refEntityList, searchQuery, 25);
-  refreshTabgroupCSS("");
+  refreshTabgroupCSS("Start");
 
   Log.d("Module", "Search query: " + searchQuery);
 }
 
-void loadRecordFrom(String uuid) {
-  String tabgroup = "Record";
+void loadBunkerFrom(String uuid) {
+  String tabgroup = "Bunker";
   setUuid(tabgroup, uuid);
   if (isNull(uuid)) return;
 
@@ -3814,11 +3973,11 @@ void loadRecordFrom(String uuid) {
 /******************************************************************************/
 /*                          TAKE FROM GPS BUTTON(S)                           */
 /******************************************************************************/
-
+addOnEvent("Bunker/Bunker_Admin/Take_From_GPS_1", "click", "takePoint(\"Bunker\")");
 
 Map getTakeFromGpsMappings() {
   Map tabgroupToTabRef = new HashMap();
-  
+  tabgroupToTabRef.put("Bunker", "Bunker/Bunker_Admin");
   return tabgroupToTabRef;
 }
 
@@ -3956,7 +4115,7 @@ void loadEntityFromScannedQrCode() {
 /*                       AUTONUMBERING HELPER FUNCTIONS                       */
 /******************************************************************************/
 Map AUTONUM_DEST_TO_SOURCE = new HashMap();
-
+AUTONUM_DEST_TO_SOURCE.put("Bunker/Bunker_Admin/Bunker_ID", "Start/Start/Next_Bunker_ID");
 
 /*
  * If value of field specified by `ref` is null, sets the field to `defaultVal`,
@@ -4028,7 +4187,7 @@ void incAutoNum(String destPath) {
 /******************************************************************************/
 /*                         POPULATION VIA <MARKDOWN>                          */
 /******************************************************************************/
-
+populateWebViewHtml("Login/Login/Signup_Guide_1", "<hr />\n<p>In order to sign up, please ensure:</p>\n<ol type=\"1\">\n<li>Your device is online</li>\n<li>FAIMS is connected to the correct server</li>\n<li>You have choosen a strong password</li>\n</ol>\n<p>A strong password has at least 6 characters, 1 uppercase letter, 1 lowercase letter, 1 digit and 1 symbol. Examples of strong passwords:</p>\n<ul>\n<li>Bond@007</li>\n<li>Dig.123</li>\n</ul>\n");
 
 /******************************************************************************/
 /*                POPULATION OF ENTITY AND CHILD ENTITY LISTS                 */
@@ -4174,8 +4333,158 @@ for (m : ENTITY_MENUS) {
 /*                             HANDWRITTEN LOGIC                              */
 /******************************************************************************/
 
-/// TODO: Implement logic
+/****************************** SEARCH EXTENSION ******************************/
+/* Constrain search to display only records created by current user           */
+/******************************************************************************/
+// Overrides auto-generated definition
+// Restrict search result to records created by current user
+void search(){
+  String refEntityList  = "Start/Search/Entity_List";
+  String refSearchTerm  = "Start/Search/Search_Term";
+  String refEntityTypes = "Start/Search/Entity_Types";
+  String type = "";
+  String term = getFieldValue(refSearchTerm);
+  String searchQuery = "SELECT uuid, response "+
+                       "  FROM latestNonDeletedArchEntFormattedIdentifiers  "+
+                       " WHERE uuid in (SELECT uuid "+
+                       "                  FROM latestNonDeletedArchEntIdentifiers "+
+                       "                 WHERE measure LIKE {term}||'%'  "+
+                       "                   AND ( aenttypename = {type} OR '' = {type} ) "+
+                       "                   AND  userid = {user}" +
+                       "                )  "+
+                       " ORDER BY response "+
+                       " LIMIT ? "+
+                       "OFFSET ? ";
+  searchQuery = dbReplaceFirst(searchQuery, "{term}", term);
+  searchQuery = dbReplaceFirst(searchQuery, "{type}", type);
+  searchQuery = dbReplaceFirst(searchQuery, "{type}", type);
+  searchQuery = dbReplaceFirst(searchQuery, "{user}", userId);
 
+  populateCursorList(refEntityList, searchQuery, 25);
+  refreshTabgroupCSS("Start");
+
+  Log.d("Module", "Search query: " + searchQuery);
+}
+/******************************    Select User   ******************************/
+/* Override auto generated function selectUser                                */
+/******************************************************************************/
+// Overrides auto-generated definition
+// Function set user to user and assign the selected user userId
+// to the global variable userid
+void selectUser() {
+  userId           = getUserMenuValue(0);
+  String nameFirst = getUserMenuValue(1);
+  String nameLast  = getUserMenuValue(2);
+  String email     = getUserMenuValue(3);
+  String password  = getUserMenuValue(4);
+  username         = nameFirst + " " + nameLast;
+  //Assign user id of current user to the global variable userid
+  User user = new User(userId, nameFirst, nameLast, email, password);
+  setUser(user);
+}
+/************************** Show Last Three Records ***************************/
+/* List 'My Last 3 Records' display last 3 records created by current user    */
+/******************************************************************************/
+addOnEvent("Start/Start", "show", "populateLastThreeRecord()");
+
+void populateLastThreeRecord(){
+  String refLastThreeRecord = "Start/Start/My_Last_3_Records";
+
+  String q = "";
+
+  q += " SELECT uuid, response";
+  q += "   FROM latestNonDeletedArchEntFormattedIdentifiers ";
+  q += "   JOIN (SELECT DISTINCT uuid, userid FROM archentity) USING (uuid) ";
+  q += "  WHERE userid = {currentUserId} ";
+  q += "  ORDER BY uuid DESC";
+  q += "  LIMIT 3;";
+
+  q = dbReplaceFirst(q, "{currentUserId}", userId);
+
+  fetchAll(q, new FetchCallback() {
+    onFetch(result) {
+      populateList(refLastThreeRecord,result);
+    }
+  });
+  Log.d("Module", "Search query: " + q);
+}
+
+addOnEvent("Start/Start/My_Last_3_Records"   , "click" , "loadEntity();");
+/***************************** WEBVIEW POPULATION *****************************/
+guideFile = getAttachedFilePath("files/data/guide/BunkersCommunityManual.html");
+populateWebView ("Login/Manual/Manual", guideFile);
+
+welcomeFile = getAttachedFilePath("files/data/welcome_page/welcome.html");
+populateWebView ("Welcome/Welcome/Logo", welcomeFile);
+/********************** Custom Location for Valdiate button *****************/
+// Remove Validate button from Navigation drawer and place it as the first item
+// In Burial_Bunker/General tab
+addOnEvent("Bunker/Bunker_Admin/Validate", "click", "validateBunker()");
+
+void removeNavigationButtons() {
+  removeNavigationButton("new");
+  removeNavigationButton("duplicate");
+  removeNavigationButton("delete");
+}
+
+void addNavigationButtons(String tabgroup) {
+  removeNavigationButtons();
+  List tabgroupsToValidate = new ArrayList();
+  tabgroupsToValidate.add("Start");
+  tabgroupsToValidate.add("Bunker");
+  addNavigationButton("new", new ActionButtonCallback() {
+    actionOnLabel() {
+      "{New}";
+    }
+    actionOn() {
+      if(isNull(getUuid(tabgroup))) {
+        showAlert(
+            "{Warning}",
+            "{The_current_record_has_not_been_saved_yet}",
+            fun2str("newRecord", new Object[]{tabgroup, true}),
+            ""
+        );
+      } else {
+        newRecord(tabgroup, true);
+        showToast("{New_record_created}");
+      }
+    }
+  }, "success");
+  addNavigationButton("duplicate", new ActionButtonCallback() {
+    actionOnLabel() {
+      "{Duplicate}";
+    }
+    actionOn() {
+      if(!isNull(getUuid(tabgroup))) {
+        duplicateRecord(tabgroup);
+      } else {
+        showWarning("{Warning}", "{This_record_is_unsaved_and_cannot_be_duplicated}");
+      }
+    }
+  }, "primary");
+  addNavigationButton("delete", new ActionButtonCallback() {
+    actionOnLabel() {
+      "{Delete}";
+    }
+    actionOn() {
+      deleteRecord(tabgroup);
+    }
+  }, "danger");
+}
+/***************************** GIS Point *****************************/
+void initMap() {
+	isEntity = true;
+	queryName = "Bunker";
+	querySQL = "SELECT uuid, aenttimestamp FROM latestNonDeletedArchEnt join aenttype using (aenttypeid) WHERE aenttypename = 'Bunker'";
+	ps = createPointStyle(10, Color.BLUE, 0.2f, 0.5f);
+	ls = createLineStyle(10, Color.BLUE, 0.05f, 0.3f, null);
+	pos = createPolygonStyle(10, Color.parseColor("#440000FF"), createLineStyle(10, Color.parseColor("#AA000000"), 0.01f, 0.3f, null));
+	ts = createTextStyle(10, Color.BLUE, 30, Typeface.SANS_SERIF);
+	showDatabaseLayer(MAP_REF, "Bunker Layer", isEntity, queryName, querySQL, ps, ls, pos, ts);
+	setMapZoom(MAP_REF, 13.0f);
+}
+initMap();
+  
 
 /******************************************************************************/
 /*                                    INIT                                    */
