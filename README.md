@@ -1,30 +1,33 @@
-# [Name of the module/project with spaces between words]
+# Aarhus Cold War Shelter/Bunker Mapping Module
 
-[One-line description of the project]
+Mapping urban civil defense systems in Aarhus as a community science endeavour
 
-[5 keywords]
+cold war archaeology; feature monitoring; urban landscapes; 
 
 ---
 
 ## About this module
 
-[Short description: purpose of the module, who commissioned it, where it's going to be used, what it can do]
+This module supports the mapping of urban civil defense systems in Aarhus and was created to facilitate course-related team-based outdoors activities by students of History, Cultural Data Science and Spatial Analytics and other courses taught by Adela Sobotkova or Rosanna Farbøl at Aarhus University. It is also available for use by other volunteers interested in public history and community science. 
+
+The module is downloadable from demo.fedarch.org. It contains a user guide and allows the user to register and sign-in, collect coordinates on civil defense features and document their morphology and condition with soft on-device validation requiring the completion of essential fields. User only sees the data s/he collected. Data from the module will be used upon verification to create a spatial dataset and support historical and spatial investigations of Cold War urban civil defenses.
+
 
 ## Authorship
 
-This module was co-developed by [Name of the researcher/client, organisation] and Penny Crook [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-8509-7865), Petra Hermankova [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-6349-0540), and Christian-Nassif Haynes at the FAIMS Project.
+This module was created by Adela Sobotkova by forking and adjusting an existing Community Mound Monitoring module developed in 2017 by Adela Sobotkova,  Petra Hermankova [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-6349-0540), and Christian-Nassif Haynes at the FAIMS Project.
 
 ## Funding
 
-Development of this module was funded by [funding agency, grant, etc.]
+Development of this module was funded by Adela Sobotkova
 
 ## Date of release
 
-Month 2020
+May 2021
 
 ### Latest updates
 
-Month 2020
+April 2021
 
 ## FAIMS Mobile version
 
@@ -36,15 +39,12 @@ This module is licensed under an international Creative Commons Licence (**CC-BY
 
 ## Access
 
-[ONLY FOR DEMO MODULES: This module is part of the **FAIMS Demo library** on our publicly accessible Demo server (<http://demo.fedarch.org/>). See [Instructions 101: How to access the Demo server](https://www.fedarch.org/resources/handouts.pdf). Note: you will need and **Android** device!]
+This module is part of the **FAIMS Demo library** on our publicly accessible Demo server (<http://demo.fedarch.org/>). See [Instructions 101: How to access the Demo server](https://www.fedarch.org/resources/handouts.pdf). Note: you will need and **Android** device!
 
-[FOR OTHER MODULES: The module can be downloaded from this GitHub repository and reinstantiated on a FAIMS server, using the following [Instructions 103: How to Deploy a module](https://www.fedarch.org/resources/handouts.pdf).]
+The module can be downloaded from this GitHub repository and reinstantiated on a FAIMS server, using the following [Instructions 103: How to Deploy a module](https://www.fedarch.org/resources/handouts.pdf).
 
 ## This module contains the following FAIMS features
 
-[DELETE THOSE THAT DON'T APPLY]
-
-* dynamic UI on radiobutton selection
 * coordinates from internal GPS
 * hierarchical dropdowns
 * controlled vocabularies
@@ -54,13 +54,14 @@ This module is licensed under an international Creative Commons Licence (**CC-BY
 
 ## This module can be used with no or minor modification for
 
-* A
-* B
-* C
+* other feature recording 
+* arbitrary point data collection
+* image capture with metadata
 
 ## Contact info
 
-For more details about the **[Project]**, please visit [http://www.website.com/]. If you have any questions about the project, contact [Person at person@email.com].
+For more details about the **Cold War Civil Defenses in Aarhus**, please read [https://doi.org/10.1017/S0963926820000590
+]. If you have any questions about the project, contact **adela@cas.au.dk** .
 
 If you have any questions about the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you as soon as possible.
 
