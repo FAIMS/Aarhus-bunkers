@@ -2,16 +2,15 @@
 
 Mapping urban civil defense systems in Aarhus as a community science endeavour
 
-cold war archaeology; feature monitoring; urban landscapes; 
+cold war archaeology; feature monitoring; urban landscapes;
 
 ---
 
 ## About this module
 
-This module supports the mapping of urban civil defense systems in Aarhus and was created to facilitate course-related team-based outdoors activities by students of History, Cultural Data Science and Spatial Analytics and other courses taught by Adela Sobotkova or Rosanna Farbøl at Aarhus University. It is also available for use by other volunteers interested in public history and community science. 
+This module supports the mapping of urban civil defense systems in Aarhus and was created to facilitate course-related team-based outdoors activities by students of History, Cultural Data Science and Spatial Analytics and other courses taught by Adela Sobotkova or Rosanna Farbøl at Aarhus University. It is also available for use by other volunteers interested in public history and community science.
 
 The module is downloadable from demo.fedarch.org. It contains a user guide and allows the user to register and sign-in, collect coordinates on civil defense features and document their morphology and condition with soft on-device validation requiring the completion of essential fields. User only sees the data s/he collected. Data from the module will be used upon verification to create a spatial dataset and support historical and spatial investigations of Cold War urban civil defenses.
-
 
 ## Authorship
 
@@ -54,13 +53,13 @@ The module can be downloaded from this GitHub repository and reinstantiated on a
 
 ## This module can be used with no or minor modification for
 
-* other feature recording 
+* other feature recording
 * arbitrary point data collection
 * image capture with metadata
 
 ## Contact info
 
-For more details about the **Cold War Civil Defenses in Aarhus**, please read [https://doi.org/10.1017/S0963926820000590
+For more details about the **Cold War Civil Defenses in Aarhus**, please read [<https://doi.org/10.1017/S0963926820000590>
 ]. If you have any questions about the project, contact **adela@cas.au.dk** .
 
 If you have any questions about the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you as soon as possible.
